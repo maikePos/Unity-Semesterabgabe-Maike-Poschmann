@@ -19,4 +19,6 @@ public class HealthPoints : MonoBehaviour
         if (currentHitPoints <= 0) // wenn die aktuellen Trefferpunkte kleiner gleich 0 sind, dann soll das GameObject mit diesem Script zerstört werden
             Destroy(gameObject);
     }
+
+  
 }

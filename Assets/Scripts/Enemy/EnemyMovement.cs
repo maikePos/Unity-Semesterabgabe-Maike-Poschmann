@@ -30,4 +30,13 @@ public class EnemyMovement : MonoBehaviour
             transform.Translate(movement);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) 
+    {
+
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
