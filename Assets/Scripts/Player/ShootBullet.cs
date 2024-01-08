@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class ShootBullet : MonoBehaviour
 {
+    public float distanceUntilDespawn = 10;
     public GameObject bullet;
     public Transform spawnBullet; //Referenz für das vorhandene Child-GameObject des Players
     public float speed;
     Vector2 lookDirection; //Vector, der auf x- und y-Achse zZugriff hat
+   
     float lookAngle; 
 
     private void Update()
     {
+       
+
         lookDirection = Camera.main.WorldToScreenPoint(transform.position); //beschreibt wo die Maus hinzeigt
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg; //kan ich nicht erklären
 
@@ -26,4 +30,6 @@ public class ShootBullet : MonoBehaviour
             bulletClone.GetComponent<Rigidbody2D>().velocity = spawnBullet.right * speed;
         }
     }
+
+    
 }
