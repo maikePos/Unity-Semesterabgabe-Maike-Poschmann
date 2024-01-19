@@ -9,6 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     private Vector2 moveInput; //Methode für das neue Input System, um ein GameObject zu bewegen
                                // Vector 2, weil es ein 2D Spiel ist
+   
+
+    
+
+
+
+
+
 
     private void Update() //Unity-Funktion, die jeden Frame neu kontrolliert, ob etwas geschehen soll
     {
